@@ -1,226 +1,116 @@
- {
+/* Base Styles */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body Styling */
 body {
-    font-family: Arial, sans-serif;
-    color: #222;
-    background-color: #ffffff;
-    font-size: 16px;
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Adjust to match the font style */
     line-height: 1.6;
-    overflow-x: hidden;
+    color: #333;
+    background-color: #f9f9f9; /* Light background */
 }
 
-/* Container for Centralized Layout */
-.container {
-    width: 80%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 0;
-}
-
-/* Header Styling */
+/* Header */
 header {
-    text-align: center;
-    padding: 60px 0;
-    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    color: #000;
-    margin-bottom: 10px;
+    font-size: 24px;
 }
 
-header p {
-    font-size: 1.2rem;
-    color: #666;
-    margin-top: 10px;
-}
-
-/* Navigation Links */
+/* Navigation */
 nav {
     display: flex;
-    justify-content: center;
-    margin-top: 30px;
 }
 
 nav a {
-    color: #000;
-    font-size: 1rem;
-    font-weight: 500;
+    margin-left: 20px;
     text-decoration: none;
-    margin: 0 15px;
-    position: relative;
-    transition: color 0.3s ease;
+    color: #333;
+    transition: color 0.3s;
 }
 
 nav a:hover {
-    color: #888;
+    color: #007bff; /* Change to the hover color */
 }
 
-/* Underline Effect for Navigation Links */
-nav a::after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 2px;
-    background: #222;
-    margin-top: 5px;
-    transition: transform 0.3s ease;
-    transform: scaleX(0);
-    transform-origin: right;
-}
-
-nav a:hover::after {
-    transform: scaleX(1);
-    transform-origin: left;
-}
-
-/* About Section */
-#about {
-    text-align: center;
-    margin-bottom: 60px;
-}
-
-#about h2 {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-    color: #000;
-}
-
-#about p {
-    font-size: 1.1rem;
-    color: #555;
-}
-
-/* Portfolio Section */
-#portfolio {
-    text-align: center;
-    margin-bottom: 60px;
-}
-
-#portfolio h2 {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-    color: #000;
-}
-
-/* Project Card */
-.project-card {
-    width: 100%;
-    max-width: 800px;
-    background: #f9f9f9;
+/* Main Content */
+main {
     padding: 40px;
-    border: 1px solid #ddd;
-    margin: 20px auto;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+/* Section Styles */
+section {
+    margin-bottom: 60px;
 }
 
-.project-card h2 {
-    font-size: 2rem;
-    color: #000;
-    margin-bottom: 15px;
+h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #007bff; /* Primary color for headings */
 }
 
-.project-card p {
-    font-size: 1rem;
-    color: #555;
+p {
     margin-bottom: 20px;
 }
 
-.project-card a {
-    display: inline-block;
-    font-weight: bold;
-    color: #000;
-    font-size: 1rem;
-    text-decoration: none;
-    transition: color 0.3s ease;
+/* Image Styles */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
-.project-card a:hover {
-    color: #888;
+/* Button Styles */
+button {
+    padding: 10px 20px;
+    background-color: #007bff; /* Primary button color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-/* Contact Section */
-#contact {
-    text-align: center;
-    margin-bottom: 60px;
-}
-
-#contact h2 {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-    color: #000;
-}
-
-#contact p {
-    font-size: 1.1rem;
-    color: #555;
-    margin-bottom: 10px;
-}
-
-#contact a {
-    color: #000;
-    font-size: 1rem;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-#contact a:hover {
-    color: #888;
+button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
 }
 
 /* Footer */
 footer {
     text-align: center;
-    padding: 40px 0;
-    background-color: #f9f9f9;
-    font-size: 0.9rem;
-    color: #666;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
 
-footer p {
-    margin-bottom: 15px;
-}
-
-footer a {
-    color: #000;
-    text-decoration: none;
-    margin: 0 10px;
-    transition: color 0.3s ease;
-}
-
-footer a:hover {
-    color: #888;
-}
-
-/* Responsive Design */
+/* Responsive Styles */
 @media (max-width: 768px) {
-    .container {
-        width: 90%;
+    header {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
-    header h1 {
-        font-size: 2.5rem;
+    nav {
+        margin-top: 10px;
+        flex-direction: column;
     }
 
-    #about, #portfolio, #contact {
-        text-align: center;
-        padding: 20px 0;
+    nav a {
+        margin-left: 0;
+        margin-bottom: 10px;
     }
 
-    .project-card {
+    main {
         padding: 20px;
     }
 }
