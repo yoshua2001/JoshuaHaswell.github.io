@@ -1,0 +1,94 @@
+        <style>
+                      			*,
+                      			*::before,
+                      			*::after {
+                      				box-sizing: border-box;
+                      			}
+                      			body {
+                      				background-color: #ccc;
+                      				background-image: url("http://jacobhulmston.com/curtain.jpg");
+                      				-webkit-background-size: cover;
+                      				-moz-background-size: cover;
+                      				-o-background-size: cover;
+                      				background-size: cover;
+                      				background-position: 300px top;
+                      				background-attachment: fixed;
+                      				font-family: Roboto, serif;
+                      				font-size: 20px;
+                      				line-height: 1.5;
+                      			}
+                      			section {
+                      				margin-bottom: 40px;
+                      			}
+                      			h1,
+                      			h2,
+                      			h3,
+                      			h4,
+                      			h5,
+                      			h6 {
+                      				font-size: 100%;
+                      			}
+                      			ul {
+                      				padding: 70px;
+                      				list-style-type: none;
+                      			}
+                      			a {
+                      				color: inherit;
+                      			}
+                      			.inlinelinklist {
+                      				color: #c0c0c0;
+                      			}
+                      			.inlinelinklist li {
+                      				display: inline-block;
+                      			}
+                      			.inlinelinklist a::before {
+                      				content: '+ ';
+                      			}
+                      			.inlinelinklist a {
+                      				color: inherit;
+                      				text-decoration: none;
+                      			}
+                      			.inlinelinklist a:hover {
+                      				color: #000;
+                      				text-decoration: underline;
+                      			}
+                      			.nomarginbelow {
+                      				margin-bottom: 0;
+                      			}
+                      			.nomarginbelow + * {
+                      				margin-top: 0;
+                      			}
+                      			#siteheader {
+                      				font-family: Consolas, Inconsolata, Monaco, monospace;
+                      				font-weight: normal;
+                      				font-style: italic;
+                      				text-transform: lowercase;
+                      				font-size: 30px;
+                      				margin-bottom: 40px;
+                      			}
+                      			#siteheader h1 {
+                      				font-weight: inherit;
+                      				line-height: 1;
+                      				margin: 0;
+                      			}
+                      			#contentbar {
+                      				background-color: #fff;
+                      				max-width: 100%;
+                      				height: 100%;
+                      				min-height: 100vh;
+                      				padding: 40px;
+                      			}
+                      			@media (min-width: 600px) {
+                      				#contentbar {
+                      					width: 300px;
+                      				}
+                      			}
+                      		</style>
+                      		<script>
+                      			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                      			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                      			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                      			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+                      			ga('create', 'UA-64720730-1', 'auto');
+                      			ga('send', 'pageview');
+                      		</script>
