@@ -97,12 +97,12 @@
 
 			/* Make the slideshow cover the entire screen */
 				.slideshow-container {
-				  position: 300px top; /* Fix it to the viewport */
+				  position: fixed; /* Fix it to the viewport */
 				  top: 0;
-				  left: 0;
+				  left: 300px;
 				  width: 100%;
 				  height: 100%;
-				
+				  z-index: -1;
 				  overflow: hidden;
 				}
 				
@@ -110,14 +110,14 @@
 				.mySlides {
 				  display: none; /* Hide all slides by default */
 				  position: 300px top;
-				  width: 100%;
-				  height: 100%;
+				  width: 50%;
+				  height: 50%;
 				}
 				
 				/* Image styling */
 				.mySlides img {
-				  width: 100%;
-				  height: 100%;
+				  width: 50%;
+				  height: 50%;
 				  object-fit: contain; /* Ensures the image covers the screen without distortion */
 				}
 				
