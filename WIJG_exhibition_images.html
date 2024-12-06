@@ -27,6 +27,12 @@
 				font-family: Roboto, sans-serif;
 				font-size: 14px;
 				line-height: 1.5;
+				
+				  display: flex; /* Enables horizontal layout */
+				  margin: 0; /* Remove default margin */
+				  height: 100vh; /* Full viewport height */
+
+
 			}
 			section {
 				margin-bottom: 40px;
@@ -84,7 +90,7 @@
 			}
 			#contentbar {
 				background-color: #fff;
-				max-width: 100%;
+				max-width: 300px;
 				height: 100%;
 				min-height: 100vh;
 				padding: 40px;
@@ -97,50 +103,48 @@
 
 			/* Make the slideshow cover the entire screen */
 				.slideshow-container {
-				  position: fixed; /* Fix it to the viewport */
-				  top: 0;
-				  left: 300px;
-				  width: 100%;
-				  height: 100%;
-				  z-index: -1;
-				  overflow: hidden;
+				
+				  flex: 1; /* Take up remaining space */
+				  position: relative; /* Allows positioning within */
+				  overflow: hidden; /* Ensures no overflow beyond the container */
+				  background: #fff; /* Optional: Black background for slideshow area */
 				}
 				
 				/* Ensure each slide fills the viewport */
 				.mySlides {
 				  display: none; /* Hide all slides by default */
-				  position: 300px top;
-				  width: 50%;
-				  height: 50%;
+				
+				  width: 80%;
+				  height: 80%;
 				}
 				
 				/* Image styling */
 				.mySlides img {
-				  width: 50%;
-				  height: 50%;
-				  object-fit: contain; /* Ensures the image covers the screen without distortion */
+				  width: 80%;
+				  height: 80%;
+				  object-fit: cover; /* Ensures the image covers the screen without distortion */
 				}
 				
 				/* Navigation Buttons */
 				.prev, .next {
 				  position: absolute;
 				  top: 50%;
-				  cursor: pointer;
+				  transform: translateY(-50%);
 				  font-size: 18px;
-				  font-weight: bold;
-				  color: white;
-				  z-index: 1; /* Ensure buttons appear above the background */
 				  background-color: rgba(0, 0, 0, 0.5);
+				  color: white;
 				  padding: 12px;
+				  cursor: pointer;
 				  border-radius: 50%;
+				  z-index: 1;
 				}
 				
 				.prev {
-				  left: 20px;
+				  left: 10px;
 				}
 				
 				.next {
-				  right: 20px;
+				  right: 10px;
 				}
 
 
