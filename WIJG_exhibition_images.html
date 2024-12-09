@@ -126,18 +126,23 @@
 				}
 				
 				/* Navigation Buttons */
-				.prev, .next {
-				  position: absolute;
-				  top: 50%;
-				  transform: translateY(-50%);
-				  font-size: 18px;
-				  background-color: rgba(0, 0, 0, 0.5);
-				  color: white;
-				  padding: 12px;
-				  cursor: pointer;
-				  border-radius: 50%;
-				  z-index: 1;
-				}
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  width: 50px; /* Explicit width */
+  height: 50px; /* Make height equal to width */
+  display: flex; /* For centering content */
+  justify-content: center; /* Center text horizontally */
+  align-items: center; /* Center text vertically */
+  cursor: pointer;
+  border-radius: 50%; /* Keep circular style */
+  z-index: 1;
+}
+
 				
 				.prev {
 				  left: 10px;
