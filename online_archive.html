@@ -9,115 +9,87 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Inconsolata|Roboto:400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet">
-		<style>
-			*,
-			*::before,
-			*::after {
-				box-sizing: border-box;
-			}
-			body {
-				background-color: #ccc;
-				background-image: 
-				-webkit-background-size: cover;
-				-moz-background-size: cover;
-				-o-background-size: cover;
-				background-size: cover;
-				background-position: 300px top;
-				background-attachment: fixed;
-				font-family: Roboto, sans-serif;
-				font-size: 14px;
-				line-height: 1.5;
-			}
-			section {
-				margin-bottom: 40px;
-			}
-			h1,
-			h2,
-			h3,
-			h4,
-			h5,
-			h6 {
-				font-size: 100%;
-			}
-			ul {
-				padding: 0;
-				list-style-type: none;
-			}
-			a {
-				color: inherit;
-			}
-			.inlinelinklist {
-				color: #c0c0c0;
-			}
-			.inlinelinklist li {
-				display: inline-block;
-			}
-			.inlinelinklist a::before {
-				content: '+ ';
-			}
-			.inlinelinklist a {
-				color: inherit;
-				text-decoration: none;
-			}
-			.inlinelinklist a:hover {
-				color: #000;
-				text-decoration: underline;
-			}
-			.nomarginbelow {
-				margin-bottom: 0;
-			}
-			.nomarginbelow + * {
-				margin-top: 0;
-			}
-			#siteheader {
-				font-family: Consolas, Inconsolata, Monaco, monospace;
-				font-weight: normal;
-				font-style: italic;
-				text-transform: lowercase;
-				font-size: 30px;
-				margin-bottom: 40px;
-			}
-			#siteheader h1 {
-				font-weight: inherit;
-				line-height: 1;
-				margin: 0;
-			}
-			#contentbar {
-				background-color: #fff;
-				max-width: 100%;
-				height: 100%;
-				min-height: 100vh;
-				padding: 40px;
-			}
-			@media (min-width: 600px) {
-				#contentbar {
-					width: 300px;
-				}
-			}
-		</style>   
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Archive</title>
+		 <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #ccc;
+            background-size: cover;
+            background-position: 300px top;
+            background-attachment: fixed;
+            font-family: Roboto, sans-serif;
+            font-size: 14px;
+            line-height: 1.5;
+            margin: 0;
+            display: flex; /* Set up flex layout for body */
+            flex-direction: row;
+            justify-content: flex-start;
+        }
+        #contentbar {
+            background-color: #fff;
+            max-width: 100%;
+            height: 100%;
+            min-height: 100vh;
+            padding: 40px;
+            width: 300px;
+        }
+        #grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 columns */
+            gap: 50px; /* Space between images */
+            flex-grow: 1; /* Let the grid take remaining space */
+            padding: 20px;
+        }
+        #grid-container img {
+            width: 100%; /* Make images fit grid cells */
+            aspect-ratio: 1; /* Ensure square images */
+            object-fit: cover; /* Ensure images are not stretched */
+            cursor: pointer; /* Pointer cursor for clickable images */
+            border: 2px solid #fff; /* Optional: Add border */
+        }
+        #grid-container img:hover {
+            border-color: #000; /* Highlight on hover */
+        }
+        @media (max-width: 600px) {
+            body {
+                flex-direction: column; /* Stack content for small screens */
+            }
+            #contentbar {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
-	<div id="contentbar">
-		   <header id="siteheader">
-		<h1>
-			Online<br>
-			Archive
-		</h1>
-	</header>
-   
-    <main>
-		<section>
-			<header>
-				<h1><i><b>Welcome to my online archive of works!</b></i></h1>
-                	</header>
-                </section>
-    </main>
-	
-</div>
-  
+    <div id="contentbar">
+        <header id="siteheader">
+            <h1>
+                Online<br>
+                Archive
+            </h1>
+        </header>
+        <main>
+            <section>
+                <header>
+                    <h1><i><b>Welcome to my online archive of works!</b></i></h1>
+                </header>
+            </section>
+        </main>
+    </div>
+    <div id="grid-container">
+        <!-- Replace with your images -->
+        <img src="https://via.placeholder.com/150" alt="Image 1">
+        <img src="https://via.placeholder.com/150" alt="Image 2">
+        <img src="https://via.placeholder.com/150" alt="Image 3">
+        <img src="https://via.placeholder.com/150" alt="Image 4">
+        <img src="https://via.placeholder.com/150" alt="Image 5">
+        <img src="https://via.placeholder.com/150" alt="Image 6">
+        <img src="https://via.placeholder.com/150" alt="Image 7">
+        <img src="https://via.placeholder.com/150" alt="Image 8">
+        <img src="https://via.placeholder.com/150" alt="Image 9">
+    </div>
 </body>
 </html>
